@@ -15,17 +15,17 @@ import java.time.LocalDate;
 public class DiaDaSemana {
 
     private final LocalDate data;
-    private final String diaDaSemana;
+    private final String nomeDoDia; // Alterado por GFT AI Impact Bot
 
     /**
      * Cria instância com data e dia da semana correspondente.
      *
      * @param data Data.
-     * @param diaDaSemana Dia da semana.
+     * @param nomeDoDia Dia da semana. // Alterado por GFT AI Impact Bot
      */
-    public DiaDaSemana(LocalDate data, String diaDaSemana) {
+    public DiaDaSemana(LocalDate data, String nomeDoDia) { // Alterado por GFT AI Impact Bot
         this.data = data;
-        this.diaDaSemana = diaDaSemana;
+        this.nomeDoDia = nomeDoDia; // Alterado por GFT AI Impact Bot
     }
 
     /**
@@ -42,7 +42,7 @@ public class DiaDaSemana {
      *
      * @return O dia da semana para a data.
      */
-    public String getDiaDaSemana() {
-        return diaDaSemana;
+    public String getNomeDoDia() { // Alterado por GFT AI Impact Bot
+        return nomeDoDia; // Alterado por GFT AI Impact Bot
     }
 }
