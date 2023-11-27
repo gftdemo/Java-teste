@@ -7,12 +7,15 @@
 package com.github.kyriosdata.exemplo.application.console;
 
 import com.github.kyriosdata.exemplo.domain.Calendario;
+import java.util.logging.Logger; // Incluido por GFT AI Impact Bot
 
 /**
  * Programa que exibe o dia da semana para o dia em que é executado.
  *
  */
 public final class ProgramaCalendario {
+
+    private static final Logger LOGGER = Logger.getLogger(ProgramaCalendario.class.getName()); // Incluido por GFT AI Impact Bot
 
     /**
      * Restringe criação de instância.
@@ -27,7 +30,7 @@ public final class ProgramaCalendario {
      * @param args Ignorados.
      */
     public static void main(final String[] args) {
-        System.out.println(Calendario.diaDaSemanaParaHoje());
+        LOGGER.info(Calendario.diaDaSemanaParaHoje()); // Alterado por GFT AI Impact Bot
     }
 
 }
