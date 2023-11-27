@@ -7,12 +7,16 @@
 package com.github.kyriosdata.exemplo.application.console;
 
 import com.github.kyriosdata.exemplo.domain.Calendario;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Programa que exibe o dia da semana para o dia em que é executado.
  *
  */
 public final class ProgramaCalendario {
+
+    private static final Logger logger = LoggerFactory.getLogger(ProgramaCalendario.class);
 
     /**
      * Restringe criação de instância.
@@ -27,7 +31,7 @@ public final class ProgramaCalendario {
      * @param args Ignorados.
      */
     public static void main(final String[] args) {
-        System.out.println(Calendario.diaDaSemanaParaHoje());
+        logger.info(Calendario.diaDaSemanaParaHoje());
     }
 
 }
