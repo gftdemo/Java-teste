@@ -12,7 +12,7 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CalendarioTest {
+class CalendarioTest { //Alterado por GFT AI Impact Bot
 
     @Test
     public void diaMenorQueUmInvalido() {
@@ -27,7 +27,6 @@ public class CalendarioTest {
     }
 
     @Test
-
     public void mesMenorQueUmInvalido() {
         assertThrows(IllegalArgumentException.class,
                 () -> Calendario.diaDaSemana(1, 0, 2016));
@@ -102,5 +101,3 @@ public class CalendarioTest {
         assertNotNull(new Calendario());
     }
 }
-
-
