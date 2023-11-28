@@ -50,7 +50,7 @@ public final class Calendario {
     /**
      * Não é esperada criação de instâncias desta classe.
      */
-    protected Calendario() {
+    private Calendario() { // Alterado por GFT AI Impact Bot
         // Apenas para agradar análise de cobertura
     }
 
@@ -60,7 +60,7 @@ public final class Calendario {
      * "domingo" (índice 6).
      */
      // TODO substituir por enum
-    public static String[] semana = {
+    private static final String[] semana = { // Alterado por GFT AI Impact Bot
             "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira",
             "sexta-feira", "sábado", "domingo"
     };
@@ -118,6 +118,6 @@ public final class Calendario {
         int ano = hoje.getYear();
         int diaDaSemana = diaDaSemana(dia, mes, ano);
 
-        return String.format("Hoje é %s\n", semana[diaDaSemana]);
+        return String.format("Hoje é %s%n", semana[diaDaSemana]); // Alterado por GFT AI Impact Bot
     }
 }
