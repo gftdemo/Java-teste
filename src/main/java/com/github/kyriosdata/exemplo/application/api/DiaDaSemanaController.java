@@ -9,6 +9,7 @@ package com.github.kyriosdata.exemplo.application.api;
 import com.github.kyriosdata.exemplo.domain.Calendario;
 import com.github.kyriosdata.exemplo.domain.DiaDaSemana;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,8 +31,8 @@ public class DiaDaSemanaController {
      * @param data Data para a qual se deseja obter o dia da semana.
      * @return Dia da semana para a data informada.
      */
-    @CrossOrigin
-    @RequestMapping("ds")
+    @CrossOrigin(origins = "http://trustedwebsite.com") // Alterado por GFT AI Impact Bot
+    @RequestMapping(value = "ds", method = RequestMethod.GET) // Alterado por GFT AI Impact Bot
     public DiaDaSemana diaDaSemana(@RequestParam(value= "data", defaultValue =
             "não fornecida") String data) {
 
