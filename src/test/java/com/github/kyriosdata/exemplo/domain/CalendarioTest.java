@@ -12,67 +12,66 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CalendarioTest {
+class CalendarioTest { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
 
     @Test
-    public void diaMenorQueUmInvalido() {
+    void diaMenorQueUmInvalido() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         assertThrows(IllegalArgumentException.class,
                 () -> Calendario.diaDaSemana(0, 8, 2016));
     }
 
     @Test
-    public void diaMaiorQue31Invalido() {
+    void diaMaiorQue31Invalido() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         assertThrows(IllegalArgumentException.class,
                 () -> Calendario.diaDaSemana(32, 8, 2016));
     }
 
     @Test
-
-    public void mesMenorQueUmInvalido() {
+    void mesMenorQueUmInvalido() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         assertThrows(IllegalArgumentException.class,
                 () -> Calendario.diaDaSemana(1, 0, 2016));
     }
 
     @Test
-    public void mesMaiorQue12Invalido() {
+    void mesMaiorQue12Invalido() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         assertThrows(IllegalArgumentException.class,
                 () -> Calendario.diaDaSemana(1, 13, 2016));
     }
 
     @Test
-    public void anoMenorQue1753Invalido() {
+    void anoMenorQue1753Invalido() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         assertThrows(IllegalArgumentException.class,
                 () -> Calendario.diaDaSemana(31, 12, 1752));
     }
 
     @Test
-    public void anoIgualAoLimiteInferior() {
+    void anoIgualAoLimiteInferior() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         assertEquals(0, Calendario.diaDaSemana(31, 12, 1753));
     }
 
     @Test
-    public void umDiaArbitrarioObtidoDeCalendario() {
+    void umDiaArbitrarioObtidoDeCalendario() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         assertEquals(2, Calendario.diaDaSemana(17, 8, 2016));
     }
 
     @Test
-    public void umAnoBissexto() {
+    void umAnoBissexto() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         assertEquals(0, Calendario.diaDaSemana(29, 2, 2016));
     }
 
     @Test
-    public void dataInvalidaAnoNaoBissextoNaoVerificaData() {
+    void dataInvalidaAnoNaoBissextoNaoVerificaData() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         assertEquals(6, Calendario.diaDaSemana(29, 2, 2015));
     }
 
     @Test
-    public void umDiaDistanteParaOsHumanos() {
+    void umDiaDistanteParaOsHumanos() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         int diaDaSemana = LocalDate.of(5000, 1, 1).getDayOfWeek().ordinal();
         assertEquals(diaDaSemana, Calendario.diaDaSemana(1, 1, 5000));
     }
 
     @Test
-    public void nomesDiasDaSemana() {
+    void nomesDiasDaSemana() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         assertEquals(7, Calendario.semana.length);
         assertEquals("segunda-feira", Calendario.semana[0]);
         assertEquals("terça-feira", Calendario.semana[1]);
@@ -84,7 +83,7 @@ public class CalendarioTest {
     }
 
     @Test
-    public void diaDaSemanaDeHoje() {
+    void diaDaSemanaDeHoje() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         String hojeStr = Calendario.diaDaSemanaParaHoje();
 
         // Primeiro dia da semana é domingo, valor 0.
@@ -98,9 +97,7 @@ public class CalendarioTest {
     }
 
     @Test
-    public void coberturaCemPorCento() {
+    void coberturaCemPorCento() { // Alterado por GFT AI Impact Bot: Removido o modificador 'public'
         assertNotNull(new Calendario());
     }
 }
-
-
