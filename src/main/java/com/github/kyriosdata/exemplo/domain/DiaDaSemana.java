@@ -24,6 +24,9 @@ public class DiaDaSemana {
      * @param diaDaSemana Dia da semana.
      */
     public DiaDaSemana(LocalDate data, String diaDaSemana) {
+        if(data == null || diaDaSemana == null || diaDaSemana.isEmpty()) { // Incluido por GFT AI Impact Bot
+            throw new IllegalArgumentException("Data e dia da semana não podem ser nulos ou vazios"); // Incluido por GFT AI Impact Bot
+        }
         this.data = data;
         this.diaDaSemana = diaDaSemana;
     }
