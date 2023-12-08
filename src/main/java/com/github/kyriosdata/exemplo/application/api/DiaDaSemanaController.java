@@ -35,6 +35,10 @@ public class DiaDaSemanaController {
     public DiaDaSemana diaDaSemana(@RequestParam(value= "data", defaultValue =
             "não fornecida") String data) {
 
+        if(data == null || data.isEmpty()) { // Incluido por GFT AI Impact Bot
+            throw new IllegalArgumentException("Data não pode ser nula ou vazia"); // Incluido por GFT AI Impact Bot
+        }
+
         LocalDate localDate = localDateFromString(data);
 
         // Se localDate não é fornecida, ou é inválida, use o dia corrente.
