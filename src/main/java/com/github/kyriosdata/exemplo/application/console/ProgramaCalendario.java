@@ -27,7 +27,12 @@ public final class ProgramaCalendario {
      * @param args Ignorados.
      */
     public static void main(final String[] args) {
-        System.out.println(Calendario.diaDaSemanaParaHoje());
+        String diaDaSemana = Calendario.diaDaSemanaParaHoje(); //Alterado por GFT AI Impact Bot
+        if(diaDaSemana != null) { //Incluido por GFT AI Impact Bot
+            System.out.println(diaDaSemana);
+        } else {
+            System.out.println("Erro: dia da semana não encontrado"); //Incluido por GFT AI Impact Bot
+        }
     }
 
 }
