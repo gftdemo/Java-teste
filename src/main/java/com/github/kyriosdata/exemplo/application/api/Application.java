@@ -22,6 +22,10 @@ public class Application {
      * @param args Ignorados. Não são usados.
      */
     public static void main(String[] args) {
+        // Incluido por GFT AI Impact Bot: Verificação de null para evitar NullPointerException
+        if (args == null) {
+            throw new IllegalArgumentException("args não pode ser null");
+        }
         SpringApplication.run(Application.class, args);
     }
 }
