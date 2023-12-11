@@ -118,6 +118,11 @@ public final class Calendario {
         int ano = hoje.getYear();
         int diaDaSemana = diaDaSemana(dia, mes, ano);
 
+        // Incluido por GFT AI Impact Bot: Verificação de null para evitar NullPointerException
+        if (semana == null || semana.length == 0) {
+            throw new IllegalStateException("Array semana não pode ser nulo ou vazio");
+        }
+
         return String.format("Hoje é %s\n", semana[diaDaSemana]);
     }
 }
