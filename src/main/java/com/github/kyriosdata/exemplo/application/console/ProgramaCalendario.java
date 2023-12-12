@@ -27,7 +27,12 @@ public final class ProgramaCalendario {
      * @param args Ignorados.
      */
     public static void main(final String[] args) {
-        System.out.println(Calendario.diaDaSemanaParaHoje());
+        // Corrigido por GFT AI Impact Bot: Adicionado verificação contra null
+        if (args != null) {
+            System.out.println(Calendario.diaDaSemanaParaHoje());
+        } else {
+            System.out.println("Argumentos nulos não são permitidos");
+        }
     }
 
 }
