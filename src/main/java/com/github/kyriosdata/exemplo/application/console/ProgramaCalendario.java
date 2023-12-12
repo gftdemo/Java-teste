@@ -27,7 +27,13 @@ public final class ProgramaCalendario {
      * @param args Ignorados.
      */
     public static void main(final String[] args) {
-        System.out.println(Calendario.diaDaSemanaParaHoje());
+        // Incluido por GFT AI Impact Bot: Adicionado verificação de nulo para evitar NullPointerException
+        String diaDaSemana = Calendario.diaDaSemanaParaHoje();
+        if (diaDaSemana != null) {
+            System.out.println(diaDaSemana);
+        } else {
+            System.out.println("Erro: dia da semana não disponível");
+        }
     }
 
 }
