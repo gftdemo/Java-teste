@@ -3,7 +3,6 @@
  * Fábrica de Software - Instituto de Informática (UFG)
  * Creative Commons Attribution 4.0 International License.
  */
-
 package com.github.kyriosdata.exemplo.domain;
 
 import java.time.LocalDate;
@@ -20,7 +19,7 @@ public class DiaDaSemana {
     /**
      * Cria instância com data e dia da semana correspondente.
      *
-     * @param data Data.
+     * @param data       Data.
      * @param diaDaSemana Dia da semana.
      */
     public DiaDaSemana(LocalDate data, String diaDaSemana) {
@@ -45,4 +44,5 @@ public class DiaDaSemana {
     public String getDiaDaSemana() {
         return diaDaSemana;
     }
+
 }
