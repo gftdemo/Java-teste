@@ -10,7 +10,6 @@ import com.github.kyriosdata.exemplo.domain.Calendario;
 
 /**
  * Programa que exibe o dia da semana para o dia em que é executado.
- *
  */
 public final class ProgramaCalendario {
 
@@ -22,7 +21,7 @@ public final class ProgramaCalendario {
     }
 
     /**
-     * Ponto de entrada da aplicação. Apenas para ilustra chamada de método.
+     * Ponto de entrada da aplicação. Apenas para ilustrar chamada de método.
      *
      * @param args Ignorados.
      */
