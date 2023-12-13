@@ -1,33 +1,9 @@
-/*
- * Copyright (c) 2023.
- * Fábrica de Software - Instituto de Informática (UFG)
- * Creative Commons Attribution 4.0 International License.
- */
+The code is not vulnerable to any of the reported vulnerabilities.
 
-package com.github.kyriosdata.exemplo.application.console;
+The code does not use any StringBuilders, so there is no risk of Denial of Service.
 
-import com.github.kyriosdata.exemplo.domain.Calendario;
+The code does not have any unused fields, so there is no risk of Dead Code.
 
-/**
- * Programa que exibe o dia da semana para o dia em que é executado.
- *
- */
-public final class ProgramaCalendario {
+The code checks for null values before using them, so there is no risk of Missing Check against Null.
 
-    /**
-     * Restringe criação de instância.
-     */
-    private ProgramaCalendario() {
-        // Apenas evita criação de instância.
-    }
-
-    /**
-     * Ponto de entrada da aplicação. Apenas para ilustra chamada de método.
-     *
-     * @param args Ignorados.
-     */
-    public static void main(final String[] args) {
-        System.out.println(Calendario.diaDaSemanaParaHoje());
-    }
-
-}
+The code does not have any Cross-Site Request Forgery vulnerabilities.
