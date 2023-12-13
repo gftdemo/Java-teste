@@ -1,19 +1,19 @@
+ ```java
 /*
  * Copyright (c) 2016.
  * Fábrica de Software - Instituto de Informática (UFG)
  * Creative Commons Attribution 4.0 International License.
  */
-
 package com.github.kyriosdata.exemplo.domain;
 
 import java.time.LocalDate;
 
 /**
- * Implementação do cálculo de dia da semana.
+ * Implementa  o do cálculo de dia da semana.
  *
  * <p>Implementação do algoritmo criado por
  * LARSEN, K. S. Computing the Day of the week,
- * Dr. Dobb´s Journal, april, 1995.
+ * Dr. Dobb’s Journal, april, 1995.
  */
 public final class Calendario {
 
@@ -59,7 +59,7 @@ public final class Calendario {
      * seguido de terça-feira (índice 1) e assim sucessivamente, até
      * "domingo" (índice 6).
      */
-     // TODO substituir por enum
+    // TODO substituir por enum
     public static String[] semana = {
             "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira",
             "sexta-feira", "sábado", "domingo"
@@ -108,16 +108,10 @@ public final class Calendario {
      * Produz sequência de caracteres indicando o dia corrente e o
      * dia da semana correspondente.
      *
-     * @return Sequência que indica o dia corrente (dia em que o método é
+     * @return Sequência que indica o dia corrente (dia em que o método
      * executado) e o dia da semana correspondente.
      */
     public static String diaDaSemanaParaHoje() {
         final LocalDate hoje = LocalDate.now();
         int dia = hoje.getDayOfMonth();
-        int mes = hoje.getMonthValue();
-        int ano = hoje.getYear();
-        int diaDaSemana = diaDaSemana(dia, mes, ano);
-
-        return String.format("Hoje é %s\n", semana[diaDaSemana]);
-    }
-}
+        int mes
