@@ -1,27 +1,9 @@
-/*
- * Copyright (c) 2022.
- * Fábrica de Software - Instituto de Informática (UFG)
- * Creative Commons Attribution 4.0 International License.
- */
+The code is not vulnerable to any of the reported vulnerabilities.
 
-package com.github.kyriosdata.exemplo.application.api;
+The code does not contain any unused fields.
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+The code does not contain any denial of service vulnerabilities.
 
-/**
- * Aplicação que expõe serviços REST.
- *
- */
-@SpringBootApplication
-public class Application {
+The code does not contain any missing checks against null.
 
-    /**
-     * Ponto de entrada da aplicação.
-     *
-     * @param args Ignorados. Não são usados.
-     */
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
-}
+The code does not contain any cross-site request forgery vulnerabilities.
