@@ -3,7 +3,6 @@
  * Fábrica de Software - Instituto de Informática (UFG)
  * Creative Commons Attribution 4.0 International License.
  */
-
 package com.github.kyriosdata.exemplo.application.api;
 
 import com.github.kyriosdata.exemplo.domain.Calendario;
@@ -19,7 +18,6 @@ import java.time.format.DateTimeFormatter;
 /**
  * Controlador REST que expõe serviço para obtenção do dia da semana
  * para uma data.
- *
  */
 @RestController
 public class DiaDaSemanaController {
@@ -32,32 +30,27 @@ public class DiaDaSemanaController {
      */
     @CrossOrigin
     @RequestMapping("ds")
-    public DiaDaSemana diaDaSemana(@RequestParam(value= "data", defaultValue =
-            "não fornecida") String data) {
-
+    public DiaDaSemana diaDaSemana(@RequestParam(value = "data", defaultValue = "não fornecida") String data) {
         LocalDate localDate = localDateFromString(data);
-
-        // Se localDate não é fornecida, ou é inválida, use o dia corrente.
+        // Se localDate não foi fornecida, ou é inválida, use o dia corrente.
         if (localDate == null) {
             localDate = LocalDate.now();
         }
-
         int dia = localDate.getDayOfMonth();
         int mes = localDate.getMonthValue();
         int ano = localDate.getYear();
-
         int ds = Calendario.diaDaSemana(dia, mes, ano);
-
         return new DiaDaSemana(localDate, Calendario.semana[ds]);
     }
 
     /**
      * Recupera a instância de {@link LocalDate} correspondente à sequência
      * de caracteres.
+     *
      * @param data Sequência de caracteres no formato dd-MM-yyyy.
      *
      * @return Instância de {@link LocalDate} ou {@code null}, se a sequência
-     * não está no formato esperado (por exemplo, "01-01-2018")
+     * não está no formato esperado (por exemplo, "01-01-2018").
      */
     public LocalDate localDateFromString(String data) {
         try {
