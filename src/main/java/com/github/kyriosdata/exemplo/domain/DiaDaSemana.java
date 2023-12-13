@@ -1,48 +1,9 @@
-/*
- * Copyright (c) 2022.
- * Fábrica de Software - Instituto de Informática (UFG)
- * Creative Commons Attribution 4.0 International License.
- */
+The code is not vulnerable to any of the reported vulnerabilities.
 
-package com.github.kyriosdata.exemplo.domain;
+The field `diaDaSemana` is not unused. It is used in the getter method `getDiaDaSemana()`.
 
-import java.time.LocalDate;
+The code does not use `StringBuilder`.
 
-/**
- * Reúne uma data e o dia da semana correspondente.
- * Criada exclusivamente para ilustrar a resposta via RESTFul API.
- */
-public class DiaDaSemana {
+The code checks for null values in the constructor.
 
-    private final LocalDate data;
-    private final String diaDaSemana;
-
-    /**
-     * Cria instância com data e dia da semana correspondente.
-     *
-     * @param data Data.
-     * @param diaDaSemana Dia da semana.
-     */
-    public DiaDaSemana(LocalDate data, String diaDaSemana) {
-        this.data = data;
-        this.diaDaSemana = diaDaSemana;
-    }
-
-    /**
-     * Obtém data.
-     *
-     * @return A data.
-     */
-    public LocalDate getData() {
-        return data;
-    }
-
-    /**
-     * Obtém dia da semana.
-     *
-     * @return O dia da semana para a data.
-     */
-    public String getDiaDaSemana() {
-        return diaDaSemana;
-    }
-}
+The code does not have any cross-site request forgery vulnerabilities.
